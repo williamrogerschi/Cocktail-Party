@@ -70,16 +70,18 @@ const Random = () => {
     }
 
     const displayIngredients = () => {
-        const ingredients = [];
+        const ingredientsWithAmounts = []
         for (let i = 1; i <= 15; i++) {
           const ingredient = randomDrink[`strIngredient${i}`]
+          const measure = randomDrink[`strMeasure${i}`]
+          
           if (ingredient) {
-            ingredients.push(ingredient)
+            ingredientsWithAmounts.push({ ingredient, measure })
           }
         }
-        return ingredients.join(', ')
+        return ingredientsWithAmounts
     }
-  
+
     return (
       <div className="random-container">
         <h1>Random Drinks</h1>
@@ -87,11 +89,28 @@ const Random = () => {
           {randomDrink && (
             <div>
               <h2>Drink Name: {randomDrink.strDrink}</h2>
-              <img src={randomDrink.strDrinkThumb} alt={randomDrink.strDrink} />
-              <p>Ingredients: {displayIngredients()}</p>
+              <img id='random-drink-image' src={randomDrink.strDrinkThumb} alt={randomDrink.strDrink} />
+              {/* <p>Ingredients: {displayIngredients()}</p> */}
               <p>Type: {randomDrink.strAlcoholic}</p>
-              <p>Instructions: {randomDrink.strInstructions}</p>
               <p>Category: {randomDrink.strCategory}</p>
+              <p>Instructions: {randomDrink.strInstructions}</p>
+              <table>
+              <thead>
+                <tr>
+                  <th>Ingredient</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {displayIngredients().map((item, index) => (
+                  <tr key={index}>
+                    <td>{item.ingredient}</td>
+                    <td>{item.measure}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            
             </div>
           )}
           <button onClick={displayRandomDrink}>Display Random Drink</button>
@@ -101,3 +120,5 @@ const Random = () => {
   };
   
   export default Random;
+
+  

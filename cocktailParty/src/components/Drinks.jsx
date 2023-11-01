@@ -6,22 +6,24 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 const Drinks = () => {
 
     const [drink, setDrink] = useState([])
+    const [drinkID, setDrinkId] = useState([])
     const [endpoint, setEndpoint] = useState({ text: '' });
     
-
+    const maxDrinks = 10
 
     
 
        
 
-    //   let navigate = useNavigate()
+      let navigate = useNavigate()
 
-    //     const showDrink = (key) => {
-    //         navigate(`${key}`)
-    //     }
+        const showDrink = (key) => {
+            navigate(`${key}`)
+        }
 
 
       const handleChange = (event) => {
@@ -45,9 +47,9 @@ const Drinks = () => {
       } else {
     return (
         <div className="drink-container">
-            <h1>input a drink</h1>
+            <h1>Here you can search for drinks by their type of alcohol</h1>
             <form onSubmit={handleSubmit}> 
-            <label htmlFor="text">alchohol:</label>
+            <label htmlFor="text">Input Type Of Alcohol</label>
             <input
                 id="text"
                 type="text"
@@ -57,13 +59,13 @@ const Drinks = () => {
             <button type="submit">Search</button>
             </form>
             <div className='drink-map'>
-            {drink.map((drink, key) => (
-            <div className="drink-card" onClick={()=>handleSubmit(key)} key={key}>
-              <h2>Name: {drink.strDrink}</h2>
-
-            </div>
-            ))}  
-
+            {drink.slice(0, maxDrinks).map((drink, key) => (
+                <div className="drink-card" onClick={() => showDrink(key)} key={key}>
+                <h2>Name: {drink.strDrink}</h2>
+                <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                <h3>{drink.idDrink}</h3>
+                </div>
+            ))}
             </div>
             
         </div>

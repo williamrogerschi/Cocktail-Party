@@ -142,4 +142,9 @@ ul {
   flex-direction: column;
 }
 
-
+#random-drink-image{
+  max-height: auto;
+  max-width: 20%;
+  margin:auto;
+  border-radius: 10px;
+}
