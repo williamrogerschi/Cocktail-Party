@@ -6,6 +6,7 @@ import Nav from './Nav'
 import Home from './Home'
 import Drinks from './Drinks'
 import Random from './Random'
+import DrinkDetails from './DrinkDetails'
 
 
 
@@ -20,7 +21,7 @@ const Main = () => {
         </div>
         <Routes>
             <Route path='/Drinks' element={<Drinks/>}/>
-            {/* <Route path='/Drinks/:id' element={<DrinkDetails/>}/> */}
+            <Route path='/Drinks/:id' element={<DrinkDetails/>}/>
             <Route path='/Random' element={<Random/>}/>
             {/* <Route path='/Random/:id' element={<RandomDetails/>}/> */}
             <Route path='/' element={<Home/>}/>
