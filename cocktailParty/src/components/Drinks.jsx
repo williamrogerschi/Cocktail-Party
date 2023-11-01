@@ -1,7 +1,8 @@
 import { BASE_URL } from '../global'
 import axios from 'axios'
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -16,11 +17,7 @@ const Drinks = () => {
     const maxDrinks = 30
 
 
-      let navigate = useNavigate()
 
-        const showDrink = (key) => {
-            navigate(`${key}`)
-        }
 
 
       const handleChange = (event) => {
@@ -70,11 +67,13 @@ const Drinks = () => {
           </div>
             <div className='drink-map'>
             {drink.slice(0, maxDrinks).map((drink, key) => (
-                <div className="drink-card" onClick={() => showDrink(key)} key={key}>
-                <h2>{drink.strDrink}</h2>
-                <img className='drink-card-image' src={drink.strDrinkThumb} alt={drink.strDrink} />
-                <h3>{drink.idDrink}</h3>
-                </div>
+                <Link key={drink.idDrink} to={`/Drinks/${drink.idDrink}`}>
+                  <div className="drink-card" >
+                  <h2>{drink.strDrink}</h2>
+                  <img className='drink-card-image' src={drink.strDrinkThumb} alt={drink.strDrink} />
+                  
+                  </div>
+                </Link>
             ))}
             </div>
             
