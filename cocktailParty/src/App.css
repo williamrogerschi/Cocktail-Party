@@ -27,30 +27,43 @@ body {
   text-align: center;
   align-items: center;
   flex-direction: row;
-  background-color: rgba(125, 146, 144, 0.67);
+  background-color: rgb(233,229,221);
+   /* rgba(125, 146, 144, 0.67); */
   border-bottom: 1px solid rgb(118, 91, 61);
   padding: 20px;
 }
 
 .header {
-  background-image: url(./assets/The-Giving-Drink_Header.jpg);
-  height: 40vh;
+  background-image: url(./assets/index-1567179608.jpg);
+  height: 60vh;
   width: 100%;
   background-size: cover;
-  background-position: 50% 55%;
+  background-position: 40% 50%;
   border-bottom: 1px solid rgb(118, 91, 61);
 }
 
 a {
   text-decoration: none;
-  color: antiquewhite;
+  color: black;
   font-size: 18px;
 }
 
 
 a:hover {
   text-decoration: none;
-  color: antiquewhite;
-  font-size: 18px;
+  color: black;
+  font-size: 18.3px;
   text-decoration-line: overline;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+
+.home-img {
+  width: auto;
+  height: auto;
+  max-width: 600px;
 }
