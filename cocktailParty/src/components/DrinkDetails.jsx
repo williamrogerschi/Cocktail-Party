@@ -40,7 +40,6 @@ export default function DrinkDetails(){
 
     return (
       <div className="random-container">
-        <h1>Random Drinks</h1>
         <div className="random-drink-card">
           {drink && (
             <div className='drink-content'>
