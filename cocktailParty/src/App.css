@@ -67,3 +67,13 @@ a:hover {
   height: auto;
   max-width: 600px;
 }
+
+#random-drink-image{
+  max-height: auto;
+  max-width: 20%;
+  margin:auto;
+  border-radius: 10px;
+
+  
+}
+
