@@ -85,19 +85,20 @@ const Random = () => {
     return (
       <div className="random-container">
         <h1>Random Drinks</h1>
+        <button onClick={displayRandomDrink}>Display Random Drink</button>
         <div className="random-drink-card">
           {randomDrink && (
-            <div>
-              <h2>Drink Name: {randomDrink.strDrink}</h2>
+            <div className='drink-content'>
+              <h2>{randomDrink.strDrink}</h2>
               <img id='random-drink-image' src={randomDrink.strDrinkThumb} alt={randomDrink.strDrink} />
               {/* <p>Ingredients: {displayIngredients()}</p> */}
-              <p>Type: {randomDrink.strAlcoholic}</p>
-              <p>Category: {randomDrink.strCategory}</p>
-              <p>Instructions: {randomDrink.strInstructions}</p>
+              <p><strong>Type:</strong> {randomDrink.strAlcoholic}</p>
+              <p><strong>Category:</strong> {randomDrink.strCategory}</p>
+              <p className='instructions'>Instructions: {randomDrink.strInstructions}</p>
               <table>
               <thead>
                 <tr>
-                  <th>Ingredient</th>
+                  <th>Ingredients</th>
                   <th>Amount</th>
                 </tr>
               </thead>
@@ -113,7 +114,7 @@ const Random = () => {
             
             </div>
           )}
-          <button onClick={displayRandomDrink}>Display Random Drink</button>
+
         </div>
       </div>
     );

@@ -16,6 +16,7 @@ body {
   margin: 0;
 }
 
+/* HOME CSS */
 .header-container {
   display: flex;
   flex-direction: column-reverse;
@@ -142,9 +143,129 @@ ul {
   flex-direction: column;
 }
 
+
+/* DRINK PAGE CSS */
+.search-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 40px 40px 40px
+}
+
+h1 {
+  display: flex;
+  text-align: center;
+}
+
+h4 {
+  display: flex;
+  text-align: center;
+  margin: -8px;
+}
+
+.search-ul {
+  font-size: x-large;
+  font-weight: 300;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.input-box#text {
+  margin-right: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.input-box#text:focus {
+  margin-right: 30px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: rgba(255, 235, 205, 0.35);
+}
+
+
+.drink-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 60px;
+  justify-items: center;
+  padding: 30px;
+}
+
+.drink-card-image {
+  max-width: 350px;
+}
+
+/* CSS */
+/* this was taken from a button styling site */
+button {
+  --b: 2px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #000000;
+  
+  padding: calc(.4em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover,
+button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0em;
+  background-color: rgba(255, 235, 205, 0.35);
+}
+
+button:active {
+  background: var(--color);
+}
+
+/* RANDOM CSS */
+.random-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200vh;
+}
+
+.drink-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vh;
+  padding: 30px;
+}
+
+.instructions {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
 #random-drink-image{
   max-height: auto;
-  max-width: 20%;
+  max-width: 50%;
   margin:auto;
-  border-radius: 10px;
 }
