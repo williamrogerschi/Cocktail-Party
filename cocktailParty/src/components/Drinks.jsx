@@ -13,11 +13,8 @@ const Drinks = () => {
     const [drinkID, setDrinkId] = useState([])
     const [endpoint, setEndpoint] = useState({ text: '' });
     
-    const maxDrinks = 10
+    const maxDrinks = 30
 
-    
-
-       
 
       let navigate = useNavigate()
 
@@ -47,22 +44,35 @@ const Drinks = () => {
       } else {
     return (
         <div className="drink-container">
-            <h1>Here you can search for drinks by their type of alcohol</h1>
+            <div className='search-container'>
+              <h1>Cocktail by Spirit</h1>
+              <h4>Here you can use the search bar below to search for your favorite Cocktail by Spririt.</h4>
+              <p>Here are some popular spirits to help you get started!</p>
+                <ul className='search-ul'>
+                  <li>Gin</li>
+                  <li>Whiskey</li>
+                  <li>Vodka</li>
+                  <li>Tequila</li>
+                </ul>
+            </div>
+              <div className='form-container'>
             <form onSubmit={handleSubmit}> 
-            <label htmlFor="text">Input Type Of Alcohol</label>
-            <input
-                id="text"
-                type="text"
-             onChange={handleChange}
-                value={endpoint.text}
-            />
-            <button type="submit">Search</button>
+                <label htmlFor="text"></label>
+                <input className='input-box'
+                    id="text"
+                    type="text"
+                    placeholder='Search by Spirit!'
+                    onChange={handleChange}
+                    value={endpoint.text}
+                />
+                <button type="submit">Search</button>
             </form>
+          </div>
             <div className='drink-map'>
             {drink.slice(0, maxDrinks).map((drink, key) => (
                 <div className="drink-card" onClick={() => showDrink(key)} key={key}>
-                <h2>Name: {drink.strDrink}</h2>
-                <img src={drink.strDrinkThumb} alt={drink.strDrink} />
+                <h2>{drink.strDrink}</h2>
+                <img className='drink-card-image' src={drink.strDrinkThumb} alt={drink.strDrink} />
                 <h3>{drink.idDrink}</h3>
                 </div>
             ))}
