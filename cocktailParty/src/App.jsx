@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import './Mobile.css'
 import Main from './components/Main'
 
 function App() {
