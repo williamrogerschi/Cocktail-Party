@@ -111,6 +111,30 @@ a:hover {
   border: 1px solid rgb(118, 91, 61);
 }
 
+.card-img-tuhmid {
+  background: url(./assets/tahmid.avif);
+  width: auto;
+  max-height: 30vh;
+  margin: 10px;
+  border: 1px solid rgb(118, 91, 61);
+}
+
+.card-img-tk {
+  background: url(./assets/sage.webp);
+  width: auto;
+  max-height: 30vh;
+  margin: 10px;
+  border: 1px solid rgb(118, 91, 61);
+}
+
+.card-img-rogers {
+  background: url(./assets/billy.jpg);
+  width: auto;
+  max-height: 30vh;
+  margin: 10px;
+  border: 1px solid rgb(118, 91, 61);
+}
+
 .card-p {
   display: flex;
   justify-content: flex-start;
