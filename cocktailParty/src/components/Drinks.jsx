@@ -87,7 +87,7 @@ const Drinks = () => {
             {drink.slice(0, maxDrinks).map((drink, key) => (
                 <Link key={drink.idDrink} to={`/Drinks/${drink.idDrink}`}>
                   <div className="drink-card" >
-                  <h2>{drink.strDrink}</h2>
+                  <h3>{drink.strDrink}</h3>
                   <img className='drink-card-image' src={drink.strDrinkThumb} alt={drink.strDrink} />
                   
                   </div>
