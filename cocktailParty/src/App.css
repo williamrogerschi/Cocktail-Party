@@ -82,6 +82,10 @@ a:hover {
   max-width: 600px;
 }
 
+.pic-container {
+  background-image: url(./assets/photo-1514362545857-3bc16c4c7d1b.avif);
+}
+
 .about-cards {
   display: flex;
   justify-content: space-around;
