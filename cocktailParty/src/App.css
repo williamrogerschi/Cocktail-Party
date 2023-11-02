@@ -264,7 +264,7 @@ button:active {
 
 #random-drink-image{
   max-height: auto;
-  max-width: 50%;
+  max-width: 60vh;
   margin:auto;
   border: 1px solid rgb(118, 91, 61);
 }

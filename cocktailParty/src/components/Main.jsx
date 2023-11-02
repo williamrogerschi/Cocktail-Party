@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom'
-
 //import components
 import Header from './Header'
 import Nav from './Nav'
@@ -23,7 +22,6 @@ const Main = () => {
             <Route path='/Drinks' element={<Drinks/>}/>
             <Route path='/Drinks/:id' element={<DrinkDetails/>}/>
             <Route path='/Random' element={<Random/>}/>
-            {/* <Route path='/Random/:id' element={<RandomDetails/>}/> */}
             <Route path='/' element={<Home/>}/>
         </Routes>
     </div>

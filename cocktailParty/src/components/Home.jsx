@@ -7,8 +7,6 @@ const Home = () => {
     
 
 
-
-
     return (
     <>
         <div className="home-container">
@@ -30,7 +28,6 @@ const Home = () => {
                         {showMintJulepDetails && (
                         <>
                         <li><strong>Ingredients:</strong> Mint, Bourbon, Sugar, Water</li>
-                        {/* <li><strong>Instructions:</strong> In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig.</li> */}
                         <li><strong>Type:</strong> Alcoholic</li>
                         <li><strong>Category:</strong> Ordinary Drink</li>
                         </>

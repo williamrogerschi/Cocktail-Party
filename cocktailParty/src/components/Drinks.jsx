@@ -6,8 +6,6 @@ import { Link } from "react-router-dom"
 
 
 
-
-
 const Drinks = () => {
 
     const [drink, setDrink] = useState([])
@@ -15,10 +13,6 @@ const Drinks = () => {
     const [endpoint, setEndpoint] = useState({ text: '' })
     
     const maxDrinks = 30
-
-    
-
-
 
 
 

@@ -6,10 +6,10 @@ import { useParams, Link } from "react-router-dom";
 
 export default function DrinkDetails(){
 
-    //setting up the individiual starship in state
+
     const [drink, setDrink] = useState()
     console.log(drink)
-    //setting up the param to pull to be the ship's ID
+
     let {id} = useParams()
     
     useEffect(()=>{
@@ -33,8 +33,6 @@ export default function DrinkDetails(){
       }
       return ingredientsWithAmounts
   }
-    
-    
 
 
 
