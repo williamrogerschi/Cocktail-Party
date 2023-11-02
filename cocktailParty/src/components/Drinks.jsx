@@ -1,7 +1,7 @@
 import { BASE_URL } from '../global'
 import axios from 'axios'
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 
 
@@ -12,26 +12,50 @@ const Drinks = () => {
 
     const [drink, setDrink] = useState([])
     const [drinkID, setDrinkId] = useState([])
-    const [endpoint, setEndpoint] = useState({ text: '' });
+    const [endpoint, setEndpoint] = useState({ text: '' })
     
     const maxDrinks = 30
+
+    
 
 
 
 
 
       const handleChange = (event) => {
-        setEndpoint({ text: event.target.value });
+        setEndpoint({ text: event.target.value })
       };
 
-      const handleSubmit  = async (event) => {
-        event.preventDefault();
-            const response1 = await axios.get(`${BASE_URL}${endpoint.text}`);
-            setDrink(response1.data.drinks);
-            console.log(response1.data.drinks);
-        // The axios call will be made automatically due to the dependency on 'endpoint' in the useEffect.
+
+      const handleSpiritClick = (spirit) => {
+        // Set the search text when a spirit is clicked
+        setEndpoint({ text: spirit })
       };
-      console.log('drinkData:', drink);
+
+
+
+      const handleSubmit = async (event) => {
+        event.preventDefault()
+      
+        try {
+          const response1 = await axios.get(`${BASE_URL}${endpoint.text}`)
+          if (response1.data.drinks) {
+            setDrink(response1.data.drinks)
+            console.log(response1.data.drinks)
+          } else {
+            // Handle the case when no data is returned (e.g., incorrect spelling)
+            alert('Cocktail not found. Please check your spelling.')
+            // Optionally reset the search bar or clear the input
+            setEndpoint({ text: '' })
+          }
+        } catch (error) {
+          // Handle other errors (e.g., network issues)
+          console.error('An error occurred:', error)
+        }
+      }
+      console.log('drinkData:', drink)
+
+
 
       if(!drink){
         console.log("loading")
@@ -46,10 +70,10 @@ const Drinks = () => {
               <h4>Here you can use the search bar below to search for your favorite Cocktail by Spririt.</h4>
               <p>Here are some popular spirits to help you get started!</p>
                 <ul className='search-ul'>
-                  <li>Gin</li>
-                  <li>Whiskey</li>
-                  <li>Vodka</li>
-                  <li>Tequila</li>
+                  <li onClick={() => handleSpiritClick('Gin')}>Gin</li>
+                  <li onClick={() => handleSpiritClick('Whiskey')}>Whiskey</li>
+                  <li onClick={() => handleSpiritClick('Vodka')}>Vodka</li>
+                  <li onClick={() => handleSpiritClick('Tequila')}>Tequila</li>
                 </ul>
             </div>
               <div className='form-container'>
