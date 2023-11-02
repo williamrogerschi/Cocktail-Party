@@ -1,4 +1,14 @@
+import React, { useState } from 'react'
+
 const Home = () => {
+    const [showMintJulepDetails, setShowMintJulepDetails] = useState(false)
+    const [showTigerKingDetails, setShowTigerKingDetails] = useState(false)
+    const [showNegroniDetails, setShowNegroniDetails] = useState(false)
+    
+
+
+
+
     return (
     <>
         <div className="home-container">
@@ -13,31 +23,50 @@ const Home = () => {
         <div className="about-cards">
             <div className="tuhmid">
                 <h2>Tschlime</h2>
-                <img className="card-img" src="src/assets/tahmid.avif"></img>
+                <img className="card-img" src="src/assets/tahmid.avif" onClick={() => setShowMintJulepDetails(!showMintJulepDetails)} style={{ cursor: 'pointer' }}></img>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> Mint Julep</li>
+                        {showMintJulepDetails && (
+                        <>
                         <li><strong>Ingredients:</strong> Mint, Bourbon, Sugar, Water</li>
+                        {/* <li><strong>Instructions:</strong> In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig.</li> */}
+                        <li><strong>Type:</strong> Alcoholic</li>
+                        <li><strong>Category:</strong> Ordinary Drink</li>
+                        </>
+                        )}
                     </ul>
                 </div>
             </div>
             <div className="tk">
                 <h2>TigerKing 'TK'</h2>
-                <img className="card-img" src="src/assets/sage.webp"></img>
+                <img className="card-img" src="src/assets/sage.webp" onClick={() => setShowTigerKingDetails(!showTigerKingDetails)} style={{ cursor: 'pointer' }}></img>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> The Tiger King</li>
+                        {showTigerKingDetails && (
+                        <>
                         <li><strong>Ingredients:</strong> Jager, Orange RedBull</li>
+                        <li><strong>Type:</strong> Alcoholic</li>
+                        <li><strong>Category:</strong> A Wild Drink ;&#41;</li>
+                        </>
+                        )}
                     </ul>
                 </div>
             </div>
             <div className="rogers">
                 <h2>Mr. Rogers</h2>
-                <img className="card-img" src="src/assets/billy.jpg"></img>
+                <img className="card-img" src="src/assets/billy.jpg" onClick={() => setShowNegroniDetails(!showNegroniDetails)} style={{ cursor: 'pointer' }}></img>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> Negroni</li>
+                        {showNegroniDetails && (
+                        <>
                         <li><strong>Ingredients:</strong> Gin, Campari, Dry Vermouth</li>
+                        <li><strong>Type:</strong> Alcoholic</li>
+                        <li><strong>Category:</strong> Ordinary Drink</li>
+                        </>
+                        )}
                     </ul>
                 </div>
             </div>

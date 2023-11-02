@@ -114,6 +114,8 @@ a:hover {
   justify-content: flex-start;
   flex-direction: row;
   padding: 12px;
+  max-width: 20vw;
+  text-align: center;
 }
 
 ul {
