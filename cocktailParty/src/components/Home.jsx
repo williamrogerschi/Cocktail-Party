@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Home = () => {
-    const [showMintJulepDetails, setShowMintJulepDetails] = useState(false)
+    const [showMintJulepDetails, setShowMintJulepDetails] = useState(false);
     const [showTigerKingDetails, setShowTigerKingDetails] = useState(false)
     const [showNegroniDetails, setShowNegroniDetails] = useState(false)
     
