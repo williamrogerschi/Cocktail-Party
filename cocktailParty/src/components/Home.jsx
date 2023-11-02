@@ -21,7 +21,7 @@ const Home = () => {
         <div className="about-cards">
             <div className="tuhmid">
                 <h2>Tschlime</h2>
-                <img className="card-img-tuhmid" src="src/assets/tahmid.avif" onClick={() => setShowMintJulepDetails(!showMintJulepDetails)} style={{ cursor: 'pointer' }}></img>
+                <div className="card-img-tuhmid" src="src/assets/tahmid.avif" onClick={() => setShowMintJulepDetails(!showMintJulepDetails)} style={{ cursor: 'pointer' }}></div>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> Mint Julep</li>
@@ -37,7 +37,7 @@ const Home = () => {
             </div>
             <div className="tk">
                 <h2>TigerKing 'TK'</h2>
-                <img className="card-img-tk" src="src/assets/sage.webp" onClick={() => setShowTigerKingDetails(!showTigerKingDetails)} style={{ cursor: 'pointer' }}></img>
+                <div className="card-img-tk" src="src/assets/sage.webp" onClick={() => setShowTigerKingDetails(!showTigerKingDetails)} style={{ cursor: 'pointer' }}></div>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> The Tiger King</li>
@@ -53,7 +53,7 @@ const Home = () => {
             </div>
             <div className="rogers">
                 <h2>Mr. Rogers</h2>
-                <img className="card-img-rogers" src="src/assets/billy.jpg" onClick={() => setShowNegroniDetails(!showNegroniDetails)} style={{ cursor: 'pointer' }}></img>
+                <div className="card-img-rogers" src="src/assets/billy.jpg" onClick={() => setShowNegroniDetails(!showNegroniDetails)} style={{ cursor: 'pointer' }}></div>
                 <div className="card-p">
                     <ul>
                         <li><strong>Favorite Drink:</strong> Negroni</li>

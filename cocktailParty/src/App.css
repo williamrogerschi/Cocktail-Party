@@ -113,26 +113,29 @@ a:hover {
 
 .card-img-tuhmid {
   background: url(./assets/tahmid.avif);
-  width: auto;
-  max-height: 30vh;
+  width: 35vh;
+  height: 35vh;
   margin: 10px;
   border: 1px solid rgb(118, 91, 61);
+  background-size:cover;
 }
 
 .card-img-tk {
   background: url(./assets/sage.webp);
-  width: auto;
-  max-height: 30vh;
+  width: 35vh;
+  height: 35vh;
   margin: 10px;
   border: 1px solid rgb(118, 91, 61);
+  background-size:cover;
 }
 
 .card-img-rogers {
   background: url(./assets/billy.jpg);
-  width: auto;
-  max-height: 30vh;
+  width: 35vh;
+  height: 35vh;
   margin: 10px;
   border: 1px solid rgb(118, 91, 61);
+  background-size:cover;
 }
 
 .card-p {
