@@ -204,6 +204,7 @@ h4 {
 
 .drink-card-image {
   max-width: 350px;
+  border: 1px solid rgb(118, 91, 61);
 }
 
 /* CSS */
@@ -269,4 +270,5 @@ button:active {
   max-height: auto;
   max-width: 50%;
   margin:auto;
+  border: 1px solid rgb(118, 91, 61);
 }
